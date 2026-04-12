@@ -40,7 +40,7 @@ class CuestionarioController extends Controller
         $cuestionario->descripcion = $request->input('descripcion');
         $cuestionario->tipo = $request->input('tipo');
 
-        // Se asignan  la clase y el profesor autenticado
+        // Se asignan la clase y el profesor autenticado
         $cuestionario->clase_id = auth()->user()->clase_id;
         $cuestionario->profesor_id = auth()->id();
 
