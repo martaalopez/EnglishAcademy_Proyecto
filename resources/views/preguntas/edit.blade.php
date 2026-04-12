@@ -42,7 +42,8 @@
                 </div>
 
                 <!-- Botón de envío -->
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary"
+                    style="background-color: #1d4ed8; color: #fff; border: none;">
                     <i class="fas fa-save me-2"></i>Guardar
                 </button>
 

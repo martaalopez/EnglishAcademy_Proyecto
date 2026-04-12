@@ -52,7 +52,8 @@
                 </div>
 
                 <!-- Botón para enviar el formulario y guardar los cambios -->
-                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="submit" class="btn btn-success"
+                    style="background-color: #1d4ed8; color: #fff; border: none;">Guardar</button>
             </form>
         </div>
     </main>

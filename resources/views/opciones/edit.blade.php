@@ -40,7 +40,8 @@
                 </div>
 
                 <!-- Botón para enviar los cambios -->
-                <button type="submit" class="btn btn-success">Guardar cambios</button>
+                <button type="submit" class="btn btn-success"
+                    style="background-color: #1d4ed8; color: #fff; border: none;">Guardar cambios</button>
 
             </form>
         </div>

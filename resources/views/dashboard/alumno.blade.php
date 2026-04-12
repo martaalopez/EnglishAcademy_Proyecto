@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('contenido')
 
-<link rel="stylesheet" href="{{ asset('css/dashboard/dashboard.css') }}">
 
 <main>
     <div class="container py-4">
         <h2>Mi dashboard</h2> <!-- Título del dashboard -->
 
+        <!-- Alert de errores si los hay -->
         @if($errors->any())
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <ul>
@@ -38,7 +38,8 @@
                             <!-- Botón para iniciar el cuestionario -->
                             <div class="d-flex justify-content-start gap-2">
                                 <a href="{{ route('cuestionarios.alumno', $cuestionario->id) }}"
-                                    class="btn btn-sm btn-info">
+                                    class="btn btn-sm btn-info"
+                                    style="background-color: #1d4ed8; color: #fff; border: none;">
                                     Hacer cuestionario
                                 </a>
                             </div>
@@ -75,7 +76,8 @@
 
                             <div class="d-flex justify-content-start gap-2">
                                 <a href="{{ route('cuestionarios.alumno', $cuestionario->id) }}"
-                                    class="btn btn-sm btn-info">
+                                    class="btn btn-sm btn-info"
+                                    style="background-color: #1d4ed8; color: #fff; border: none;">
                                     Hacer cuestionario
                                 </a>
                             </div>
@@ -111,7 +113,8 @@
 
                             <div class="d-flex justify-content-start gap-2">
                                 <a href="{{ route('cuestionarios.alumno', $cuestionario->id) }}"
-                                    class="btn btn-sm btn-info">
+                                    class="btn btn-sm btn-info"
+                                    style="background-color: #1d4ed8; color: #fff; border: none;">
                                     Hacer cuestionario
                                 </a>
                             </div>
@@ -147,7 +150,8 @@
 
                             <div class="d-flex justify-content-start gap-2">
                                 <a href="{{ route('cuestionarios.alumno', $cuestionario->id) }}"
-                                    class="btn btn-sm btn-info">
+                                    class="btn btn-sm btn-info"
+                                    style="background-color: #1d4ed8; color: #fff; border: none;">
                                     Hacer cuestionario
                                 </a>
                             </div>
@@ -168,4 +172,3 @@
 </main>
 
 @endsection
-<!-- Cierre de la sección 'contenido' -->

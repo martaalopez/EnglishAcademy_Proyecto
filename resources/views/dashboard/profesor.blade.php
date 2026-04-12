@@ -4,12 +4,16 @@
 
 <main>
     <div class="container py-4">
+
+        <!-- Cabecera del dashboard con botón para crear un nuevo cuestionario -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold">Dashboard de administración</h2>
             <a href="{{ route('cuestionarios.create') }}" class="btn btn-primary">
                 + Nuevo Cuestionario
             </a>
         </div>
+
+        <!-- Alert de errores si existen -->
         @if($errors->any())
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <ul class="mb-0">
@@ -34,10 +38,12 @@
                 <div class="col">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
+                            <!-- Título y descripción del cuestionario -->
                             <h5 class="card-title fw-bold">{{ $cuestionario->titulo }}</h5>
                             <p class="card-text text-muted small mb-3">{{ $cuestionario->descripcion ?: 'Sin
                                 descripción' }}</p>
 
+                            <!-- Botones compactos para ver, editar o eliminar -->
                             <div class="d-flex justify-content-start gap-2">
                                 <a href="{{ route('cuestionarios.show', $cuestionario) }}"
                                     class="btn btn-sm btn-info px-2 py-1" title="Ver detalles">

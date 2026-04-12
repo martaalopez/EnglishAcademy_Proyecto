@@ -19,7 +19,8 @@
             </p>
 
             <!-- Se muestra el botón para volver al dashboard -->
-            <a href="{{ route('dashboard.alumno') }}" class="btn btn-outline-secondary btn-sm">
+            <a href="{{ route('dashboard.alumno') }}" class="btn btn-outline-secondary btn-sm"
+                style="background-color: #1d4ed8; color: #fff; border: none;">
                 ← Volver al dashboard
             </a>
 
@@ -67,7 +68,7 @@
         <!-- Se muestra el botón para enviar el cuestionario -->
         <div class="text-center mt-4">
 
-            <button class="btn btn-success btn-lg px-5">
+            <button class="btn btn-success btn-lg px-5" style="background-color: #1d4ed8; color: #fff; border: none;">
                 Enviar cuestionario
             </button>
 

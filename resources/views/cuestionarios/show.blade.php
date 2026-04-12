@@ -26,7 +26,8 @@ $puedeTerminar = $preguntasCompletas >= 5;
 
             <!-- Botón para agregar una nueva pregunta-->
             @if(!$puedeTerminar)
-            <a href="{{ route('preguntas.create', ['cuestionario_id' => $cuestionario->id]) }}" class="btn btn-success">
+            <a href="{{ route('preguntas.create', ['cuestionario_id' => $cuestionario->id]) }}" class="btn btn-success"
+                style="background-color: #1d4ed8; color: #fff; border: none;">
                 Agregar Pregunta
             </a>
             @else
@@ -123,7 +124,8 @@ $puedeTerminar = $preguntasCompletas >= 5;
 <!-- Botón para finalizar cuestionario -->
 <div class="mt-3">
     @if($puedeTerminar)
-    <a href="{{ route('dashboard.profesor') }}" class="btn btn-success btn-lg w-100">
+    <a href="{{ route('dashboard.profesor') }}" class="btn btn-success btn-lg w-100"
+        style="background-color: #1d4ed8; color: #fff; border: none;">
         Finalizar cuestionario
     </a>
     @else

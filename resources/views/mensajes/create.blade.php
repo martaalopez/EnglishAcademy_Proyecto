@@ -50,7 +50,8 @@
         </div>
 
         <!-- Botones de enviar y volver al dashboard -->
-        <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="submit" class="btn btn-success"
+            style="background-color: #1d4ed8; color: #fff; border: none;">Enviar</button>
         <a href="{{ route('dashboard.' . Auth::user()->rol) }}" class="btn btn-success">Volver</a>
     </form>
 

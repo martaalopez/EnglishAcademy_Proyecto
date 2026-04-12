@@ -19,7 +19,7 @@
     @else
     <div class="table-responsive">
         <table class="table table-bordered table-striped align-middle">
-            <thead class="table-dark">
+            <thead style="background-color: #1d4ed8 !important; color: #fff !important;">
                 <tr>
                     <th>Cuestionario</th>
                     <th>Puntuación</th>
@@ -34,7 +34,8 @@
                     <td>{{ $resultado->puntuacion_obtenida }}/5</td>
                     <td>{{ $resultado->created_at->format('d/m/Y H:i') }}</td>
                     <td>
-                        <a href="{{ route('resultados.show', $resultado->id) }}" class="btn btn-sm btn-info">
+                        <a href="{{ route('resultados.show', $resultado->id) }}" class="btn btn-sm"
+                            style="background-color: #1d4ed8; color: #fff; border: none;">
                             Ver detalles
                         </a>
                     </td>

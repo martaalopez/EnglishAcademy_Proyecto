@@ -42,7 +42,8 @@
 
                 <!-- Botón de envío -->
                 <div class="d-flex justify-content-between mt-4">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary"
+                        style="background-color: #1d4ed8; color: #fff; border: none;">
                         <i class="fas fa-save me-2"></i>Guardar
                     </button>
                 </div>

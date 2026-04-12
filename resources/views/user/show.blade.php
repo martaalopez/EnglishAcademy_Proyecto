@@ -47,7 +47,8 @@
 
     {{-- Botón para editar perfil --}}
     <div class="d-flex justify-content-end gap-2 mt-3">
-        <a href="{{ route('usuarios.edit', Auth::user()->id) }}" class="btn btn-warning">
+        <a href="{{ route('usuarios.edit', Auth::user()->id) }}" class="btn btn-warning"
+            style="background-color: #1d4ed8; color: #fff; border: none;">
             <i class="fas fa-edit me-2"></i>Editar Perfil
         </a>
 
