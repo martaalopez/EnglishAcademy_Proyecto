@@ -1,17 +1,12 @@
 @extends('layouts.app')
-<!-- Extiende la plantilla base 'app' -->
-
 @section('contenido')
-<!-- Sección principal de contenido -->
 
-<!-- Se incluye un CSS específico para el dashboard -->
 <link rel="stylesheet" href="{{ asset('css/dashboard/dashboard.css') }}">
 
 <main>
     <div class="container py-4">
         <h2>Mi dashboard</h2> <!-- Título del dashboard -->
 
-        <!-- Alert de errores si los hay -->
         @if($errors->any())
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <ul>

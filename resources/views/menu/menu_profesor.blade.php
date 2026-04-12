@@ -2,17 +2,12 @@
 <html lang="es">
 
 <head>
-    <!-- Codificación y configuración responsive -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Título de la página -->
     <title>Dashboard Profesor</title>
-
-    <!-- Bootstrap CSS desde CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -78,16 +73,11 @@
                     </button>
                 </form>
 
-            </div>
+            </div>s
         </div>
     </nav>
-
-    <!-- Contenido principal de la página -->
     <main class="py-4">
-        <!-- Aquí se pueden inyectar los contenidos específicos de cada vista del profesor -->
     </main>
-
-    <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

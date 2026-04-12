@@ -71,7 +71,7 @@
             @enderror
         </div>
 
-        @endif {{-- fin @if alumno --}}
+        @endif
 
         <div class="mb-3">
             <label for="password" class="form-label fw-bold">Contraseña</label>
@@ -98,7 +98,7 @@
     const selectClase = document.getElementById('clase_id');
     const selectNivel = document.getElementById('nivel');
 
-    // Mensaje de error visual
+    // Mensaje de error 
     const errorDiv = document.createElement('div');
     errorDiv.className = 'alert alert-danger mt-2 d-none';
     errorDiv.textContent = 'El nivel de la clase no coincide con el nivel seleccionado.';

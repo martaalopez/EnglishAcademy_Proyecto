@@ -4,11 +4,7 @@
 <div class="container py-5">
     <main>
         <div class="container py-4">
-
-            <!-- Título de la página -->
             <h2>Edita la opción</h2>
-
-            <!-- Mostrar errores de validación si los hay -->
             @if($errors->any())
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <ul>
@@ -24,11 +20,7 @@
             <!-- Formulario para actualizar la opción existente -->
             <form action="{{ route('opciones.update', $opcion->id) }}" method="POST">
                 @csrf
-                <!-- Token CSRF para seguridad -->
                 @method('PUT')
-                <!-- Indica que se trata de una actualización -->
-
-                <!-- Campo oculto para enviar el ID de la pregunta asociada -->
                 <div class="mb-3">
                     <input type="hidden" name="pregunta_id" value="{{ $opcion->pregunta_id }}">
                 </div>

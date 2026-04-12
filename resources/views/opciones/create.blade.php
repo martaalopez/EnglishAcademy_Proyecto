@@ -4,11 +4,8 @@
 <div class="container py-5">
     <main>
         <div class="container py-4">
-
-            <!-- Título de la página -->
             <h2>Añade una opción</h2>
 
-            <!-- Mostrar errores de validación -->
             @if($errors->any())
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <ul>
@@ -24,9 +21,6 @@
             <!-- Formulario para crear una nueva opción -->
             <form action="{{ route('opciones.store') }}" method="POST">
                 @csrf
-                <!-- Token CSRF por seguridad -->
-
-                <!-- Campo oculto para enviar el ID de la pregunta asociada -->
                 <div class="mb-3">
                     <input type="hidden" name="pregunta_id" value="{{ $pregunta->id }}">
                     <div>
@@ -51,7 +45,6 @@
 
                 <!-- Botones para enviar o cancelar -->
                 <button type="submit" class="btn btn-success">Guardar</button>
-                <!-- Nota: el botón "Cancelar" actualmente también hace submit; lo ideal sería usar un enlace <a> -->
                 <a class="btn btn-secondary" href="{{ route('preguntas.index') }}">Cancelar</a>
             </form>
 

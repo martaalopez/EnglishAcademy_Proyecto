@@ -4,11 +4,7 @@
 <div class="container py-5">
     <main>
         <div class="container py-4">
-
-            <!-- Título de la página -->
             <h2>Nueva pregunta</h2>
-
-            <!-- Mostrar errores de validación si existen -->
             @if($errors->any())
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <ul>

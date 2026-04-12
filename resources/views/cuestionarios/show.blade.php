@@ -1,21 +1,18 @@
 @extends('layouts.app')
-<!-- Extiende la plantilla base 'app', heredando estructura general y estilos -->
 
 @section('title', $cuestionario->titulo)
-<!-- Define el título de la página usando el título del cuestionario -->
 
 @section('contenido')
-<!-- Sección de contenido principal -->
+
 
 @php
-// Contar cuántas preguntas están completas:
-// Una pregunta completa tiene al menos 2 opciones y al menos 1 opción marcada como correcta
+// Contar cuántas preguntas están hechas
 $preguntasCompletas = $cuestionario->preguntas->filter(function($pregunta) {
 return $pregunta->opciones->count() >= 2
 && $pregunta->opciones->where('es_correcta', true)->count() > 0;
 })->count();
 
-// Determina si el cuestionario puede finalizar (mínimo 5 preguntas completas)
+// Determina si el cuestionario puede finalizar
 $puedeTerminar = $preguntasCompletas >= 5;
 @endphp
 
@@ -27,7 +24,7 @@ $puedeTerminar = $preguntasCompletas >= 5;
             <h2>{{ $cuestionario->titulo }}</h2>
             <p class="text-muted">{{ $cuestionario->descripcion }}</p>
 
-            <!-- Botón para agregar una nueva pregunta solo si no se alcanzó el límite de 5 preguntas completas -->
+            <!-- Botón para agregar una nueva pregunta-->
             @if(!$puedeTerminar)
             <a href="{{ route('preguntas.create', ['cuestionario_id' => $cuestionario->id]) }}" class="btn btn-success">
                 Agregar Pregunta
@@ -139,4 +136,3 @@ $puedeTerminar = $preguntasCompletas >= 5;
 </div>
 
 @endsection
-<!-- Cierre de la sección 'contenido' -->

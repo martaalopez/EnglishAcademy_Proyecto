@@ -29,9 +29,7 @@
     <!-- Se define el formulario que enviará las respuestas al route resultados.store -->
     <form method="POST" action="{{ route('resultados.store') }}">
         @csrf
-        <!-- Se incluye el token CSRF para seguridad -->
-
-        <!-- Se envía el ID del cuestionario de forma oculta -->
+        <!-- Se envía el ID del cuestionario -->
         <input type="hidden" name="cuestionario_id" value="{{ $cuestionario->id }}">
 
         <!-- Se recorren todas las preguntas del cuestionario -->

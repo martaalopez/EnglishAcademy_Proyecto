@@ -5,18 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registro</title>
-
-    <!-- Se incluye Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Se incluye el CSS personalizado para el registro -->
     <link rel="stylesheet" href="{{ asset('css/auth/register.css') }}">
 </head>
 
 <body>
     <div class="container">
 
-        <!-- Se muestra el texto de bienvenida al registro -->
+        <!-- Se muestra el texto de bienvenida  -->
         <div class="registro-text">
             <h1>
                 Crea tu cuenta <br>
@@ -57,7 +53,7 @@
                     </div>
                 </div>
 
-                <!-- Se muestran los campos de rol y nivel en dos columnas -->
+                <!-- Se muestran los campos de rol y nivel -->
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label">¿Eres profesor o alumno?</label>

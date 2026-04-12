@@ -1,28 +1,19 @@
 @extends('layouts.app')
-<!-- Extiende la plantilla base 'app', heredando estilos y estructura general -->
-
 @section('contenido')
-<!-- Sección principal de contenido -->
+
 
 <div class="container py-4">
-
-    <!-- Mensaje de éxito tras enviar un mensaje -->
     @if(session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <!-- Área donde se muestran los mensajes con scroll vertical -->
     <div style="height: 55vh; overflow-y: auto;" id="messages-area" class="mb-3">
-
-        <!-- Si hay mensajes, los recorremos -->
         @if($mensajes->count() > 0)
         @foreach($mensajes as $mensaje)
         <div
             class="mb-3 d-flex {{ $mensaje->user_id === Auth::id() ? 'justify-content-end' : 'justify-content-start' }}">
-            <!-- Si el mensaje es del usuario autenticado, se alinea a la derecha; si no, a la izquierda -->
 
             <div style="max-width: 65%;">
-                <!-- Cabecera del mensaje: nombre del usuario y hora -->
                 <div class="mb-1">
                     <strong>{{ $mensaje->user->nombre }}</strong>
                     <small class="text-muted">{{ $mensaje->created_at->format('H:i') }}</small>
@@ -65,11 +56,10 @@
 
 </div>
 
-<!-- Script para hacer scroll automático al final del área de mensajes -->
+<!-- Script para hacer scroll -->
 <script>
     const area = document.getElementById('messages-area');
     if (area) area.scrollTop = area.scrollHeight;
 </script>
 
 @endsection
-<!-- Cierre de la sección 'contenido' -->

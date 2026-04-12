@@ -1,15 +1,13 @@
 @extends('layouts.app')
-<!-- Se extiende la plantilla base 'app' para heredar la estructura general de la aplicación -->
 
 @section('contenido')
-<!-- Se define la sección 'contenido' que será inyectada en la plantilla -->
 
 <div class="container py-5">
     <main>
         <div class="container py-4">
-            <h2>Crea un cuestionario</h2> <!-- Título principal de la página -->
+            <h2>Crea un cuestionario</h2>
 
-            <!-- Se muestra un alert si hay errores de validación -->
+            <!-- Se muestra un alert si hay errores -->
             @if($errors->any())
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <ul>
@@ -18,7 +16,6 @@
                     <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-                <!-- Botón para cerrar el alert -->
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
             </div>
             @endif
@@ -26,7 +23,6 @@
             <!-- Formulario para crear un nuevo cuestionario -->
             <form action="{{ route('cuestionarios.store') }}" method="POST">
                 @csrf
-                <!-- Token CSRF para proteger contra ataques de tipo cross-site request forgery -->
 
                 <!-- Campo para el título del cuestionario -->
                 <div class="mb-3">
@@ -70,4 +66,3 @@
 </div>
 
 @endsection
-<!-- Cierre de la sección 'contenido' -->

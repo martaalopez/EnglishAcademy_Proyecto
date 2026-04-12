@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <!-- Se incluye Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Se incluye el CSS personalizado para el login -->
     <link rel="stylesheet" href="{{ asset('css/auth/login.css') }}">
 </head>
 
@@ -29,14 +27,14 @@
         <div class="card">
             <h3 class="text-center">Iniciar sesión</h3>
 
-            <!-- Se define el formulario que enviará los datos al route login.post -->
+            <!-- Se define el formulario -->
             <form method="POST" action="{{ route('login.post') }}">
                 @csrf
-                <!-- Se incluye el token CSRF para seguridad -->
+                <!-- Se incluye el token CSRF para la seguridad -->
 
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <!-- Se muestra el campo email con validación de errores -->
+                    <!-- Se muestra el campo email -->
                     <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                         value="{{ old('email') }}" required>
                     @error('email')
@@ -46,7 +44,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Contraseña</label>
-                    <!-- Se muestra el campo password con validación de errores -->
+                    <!-- Se muestra el campo password  -->
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
                         required>
                     @error('password')
@@ -59,7 +57,6 @@
                     Acceder
                 </button>
 
-                <!-- Se muestra el enlace para ir al registro -->
                 <p class="text-center mb-0">
                     ¿No tienes cuenta?
                     <a href="{{ route('register') }}">Regístrate</a>
@@ -68,7 +65,6 @@
         </div>
     </div>
 
-    <!-- Se incluye Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

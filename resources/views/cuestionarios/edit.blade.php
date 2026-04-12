@@ -1,34 +1,28 @@
 @extends('layouts.app')
-<!-- Extiende la plantilla base 'app', heredando estructura y estilos de la app -->
 
 @section('contenido')
-<!-- Se define la sección 'contenido' que se inyectará en la plantilla -->
 
 <div class="container py-5">
     <main>
         <div class="container py-4">
-            <h2>Edita un cuestionario</h2> <!-- Título de la página para editar el cuestionario -->
+            <h2>Edita un cuestionario</h2>
 
-            <!-- Alert que se muestra si hay errores de validación -->
             @if($errors->any())
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <ul>
-                    <!-- Recorre todos los errores y los muestra en una lista -->
+
                     @foreach ($errors->all() as $error )
                     <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-                <!-- Botón para cerrar el alert -->
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
             </div>
             @endif
 
-            <!-- Formulario para actualizar un cuestionario existente -->
+            <!-- Formulario para actualizar un cuestionario -->
             <form action="{{ route('cuestionarios.update',$cuestionario->id) }}" method="post">
                 @method("PUT")
-                <!-- Indica que la solicitud es de tipo PUT, necesario para actualizar recursos -->
                 @csrf
-                <!-- Token CSRF para proteger el formulario -->
 
                 <!-- Campo para editar el título del cuestionario -->
                 <div class="mb-3">
@@ -65,4 +59,3 @@
 </div>
 
 @endsection
-<!-- Cierre de la sección 'contenido' -->
