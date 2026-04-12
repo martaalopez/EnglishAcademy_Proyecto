@@ -1,0 +1,59 @@
+/* Fondo general */
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
+    color: #f8fafc;
+}
+
+/* Contenedor */
+.cuestionario-container {
+    max-width: 900px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Pregunta */
+.pregunta-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.pregunta-box:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Radios */
+.form-check-input:checked {
+    background-color: #22c55e;
+    border-color: #22c55e;
+}
+
+/* Botón enviar */
+.btn-success {
+    background-color: #22c55e;
+    border: none;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.btn-success:hover {
+    background-color: #16a34a;
+}
+
+/* Botón volver */
+.btn-secondary {
+    background-color: #64748b;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+}
