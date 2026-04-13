@@ -28,7 +28,7 @@ class LoginController extends Controller
     // Procesa el registro de un usuario
     public function register(Request $request)
     {
-        // Se validan los datos 
+        // Se validan los datos
         $request->validate([
             'nombre' => 'required|string|max:30',
             'email' => 'required|email|unique:users,email',
@@ -46,7 +46,7 @@ class LoginController extends Controller
             'rol.required' => 'Debes seleccionar si eres profesor o alumno.',
         ]);
 
-        // Si es profesor, se comprueba que no haya uno en esa clase
+        // Si es profesor, se comprueba que no haya uno en la clase
         if ($request->rol === 'profesor') {
             $profesorExistente = User::where('clase_id', $request->clase_id)
                 ->where('rol', 'profesor')
@@ -96,7 +96,7 @@ class LoginController extends Controller
             $clase->save();
         }
 
-        // Se inicia sesión 
+        // Se inicia sesión
         Auth::login($user);
 
         return $this->redirectPorRol($user);
