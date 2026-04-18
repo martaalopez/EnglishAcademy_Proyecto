@@ -15,19 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 30);
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
             $table->enum('rol', ['alumno', 'profesor']);
             $table->enum('nivel', ['b1', 'b2', 'c1']);
-            $table->unsignedBigInteger('clase_id');
-            // Se establece la clave foránea con la tabla clases
-            $table->foreign('clase_id')
-                ->references('id')
-                ->on('clases')
-                ->onDelete('set null');
+
+            $table->unsignedBigInteger('clase_id')->nullable();
+
             $table->timestamps();
         });
+
     }
 
     public function down(): void
