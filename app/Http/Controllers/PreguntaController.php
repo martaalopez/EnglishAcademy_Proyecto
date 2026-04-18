@@ -51,7 +51,7 @@ class PreguntaController extends Controller
         ]);
 
         if (Pregunta::where('cuestionario_id', $request->cuestionario_id)->count() >= 5) {
-            return back()->withErrors(['pregunta' => 'No puedes agregar más de 10 preguntas'])->withInput();
+            return back()->withErrors(['pregunta' => 'No puedes agregar más de 5 preguntas'])->withInput();
         }
 
         $pregunta = new Pregunta;
@@ -84,7 +84,6 @@ class PreguntaController extends Controller
 
         return view('preguntas.edit', compact('pregunta', 'cuestionarios'));
     }
-
     /**
      * Se actualiza una pregunta
      */
@@ -104,7 +103,6 @@ class PreguntaController extends Controller
         return redirect()->route('cuestionarios.show', ['cuestionario' => $pregunta->cuestionario_id])
             ->with('success', 'Pregunta actualizada correctamente');
     }
-
     /**
      * Se elimina una pregunta
      */

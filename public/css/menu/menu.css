@@ -32,9 +32,13 @@ html, body {
     padding: 24px;
 }
 
+
 .sidebar {
     width: 260px;
-    height: 100vh;
+    min-height: 100vh;        
+    position: sticky;   
+    top: 0;                   
+    align-self: flex-start;    
     background: #1d4ed8;
     color: #fff;
     display: flex;
@@ -43,7 +47,6 @@ html, body {
     padding: 15px;
     transition: all 0.3s ease;
 }
-
 .sidebar__brand {
     font-size: 20px;
     font-weight: bold;
